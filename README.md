@@ -28,3 +28,22 @@ You could edit and enable "Sync Code" YAML file to let your forked repo keep upd
 **3. Sync Code**
   - Uncomment 'push-branches-master' 3 lines under **`On`** section and commit changes to let the script sync the code once for you.
   - Uncomment 'schedule-cron' 2 lines under **`On`** section and commit changes to let the script sync the code everyday on 3 am[UTC +8]
+
+## Lists
+  - luci-app-accesscontrol 访问控制
+  - luci-app-argon-config Argon主题配置插件
+  - luci-app-arpbind IP/MAC绑定
+  - luci-app-autoreboot 支持计划重启
+  - luci-app-diskman 磁盘管理工具
+    - lsblk 列出所有可用块设备的信息
+  - luci-app-docker Docker容器
+  - luci-app-dockerman Dockerman容器
+  - luci-app-filetransfer 文件传输（可web安装ipk包）
+  - luci-app-firewall 添加防火墙
+  - uci-app-nlbwmon 网络带宽监视器
+  - luci-app-ntpc NTP时间同步服务器
+  - luci-app-rclone 命令行云端同步工具
+    - rclone-webui Rclone界面
+    - rclone-ng (another webui) Rclone另一个界面
+  - luci-app-socat 多功能的网络工具(端口转发)
+  - luci-app-upnp 通用即插即用UPnP（端口自动转发）
