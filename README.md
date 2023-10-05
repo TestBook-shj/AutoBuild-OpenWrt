@@ -46,4 +46,9 @@ You could edit and enable "Sync Code" YAML file to let your forked repo keep upd
     - rclone-webui Rclone界面
     - rclone-ng (another webui) Rclone另一个界面
   - luci-app-socat 多功能的网络工具(端口转发)
+  - luci-app-turboacc Turbo ACC 网络加速(支持 Fast Path 或者 硬件 NAT)
+    - Include Shortcut-FE Shortcut-FE 流量分载
+    - Include BBR CCA BBR拥塞控制算法提升TCP网络性能
+    - Include Pdnsd DNS防污染
   - luci-app-upnp 通用即插即用UPnP（端口自动转发）
+  - luci-app-wol WOL网络唤醒
