@@ -14,7 +14,7 @@ on:
 
 env:
   UPLOAD_FIRMWARE: true
-  UPLOAD_RELEASE: false
+  UPLOAD_RELEASE: true
 
 jobs:
   build:
