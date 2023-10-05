@@ -29,11 +29,17 @@ You could edit and enable "Sync Code" YAML file to let your forked repo keep upd
   - Uncomment 'push-branches-master' 3 lines under **`On`** section and commit changes to let the script sync the code once for you.
   - Uncomment 'schedule-cron' 2 lines under **`On`** section and commit changes to let the script sync the code everyday on 3 am[UTC +8]
 
-## Lists
+## Plugins
+
+**1. Extra packages**
+  - ipv6helper
+
+**2. Applications**
   - luci-app-accesscontrol 访问控制
   - luci-app-argon-config Argon主题配置插件
   - luci-app-arpbind IP/MAC绑定
   - luci-app-autoreboot 支持计划重启
+  - luci-app-design-config Design主题配置插件
   - luci-app-diskman 磁盘管理工具
     - lsblk 列出所有可用块设备的信息
   - luci-app-docker Docker容器
@@ -46,9 +52,21 @@ You could edit and enable "Sync Code" YAML file to let your forked repo keep upd
     - rclone-webui Rclone界面
     - rclone-ng (another webui) Rclone另一个界面
   - luci-app-socat 多功能的网络工具(端口转发)
+  - luci-app-smartdns SmartDNS本地服务器
   - luci-app-turboacc Turbo ACC 网络加速(支持 Fast Path 或者 硬件 NAT)
     - Include Shortcut-FE Shortcut-FE 流量分载
     - Include BBR CCA BBR拥塞控制算法提升TCP网络性能
     - Include Pdnsd DNS防污染
   - luci-app-upnp 通用即插即用UPnP（端口自动转发）
-  - luci-app-wol WOL网络唤醒
+
+**3. Theme**
+  - luci-theme-argon
+  - luci-theme-argon-mod
+  - luci-theme-bootstrap
+  - luci-theme-design
+  - luci-theme-material
+  - luci-theme-netgear
+
+**3. Network**
+  - ip6tables-extra
+  - ip6tables-mod-nat

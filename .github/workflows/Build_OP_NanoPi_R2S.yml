@@ -93,16 +93,19 @@ jobs:
         make download -j$(nproc)
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
+
     - name: Build firmware
       working-directory: ./openwrt
       run: |
         echo -e "$(nproc) thread build."
         make -j$(nproc) V=s
+
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
         name: OpenWrt
         path: openwrt/bin
+
     - name: Generate release tag
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
@@ -112,6 +115,7 @@ jobs:
         [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
         echo "::set-output name=status::success"
+
     - name: Upload firmware to release
       uses: softprops/action-gh-release@v1
       if: steps.tag.outputs.status == 'success' && !cancelled()
@@ -121,6 +125,7 @@ jobs:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
+
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
       with:
@@ -128,7 +133,7 @@ jobs:
         keep_minimum_runs: 3
 
     - name: Remove old Releases
-      uses: dev-drprasad/delete-older-releases@v0.1.0
+      uses: dev-drprasad/delete-older-releases@v0.3.2
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
         keep_latest: 3
