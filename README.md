@@ -39,7 +39,6 @@ You could edit and enable "Sync Code" YAML file to let your forked repo keep upd
   - luci-app-argon-config Argon主题配置插件
   - luci-app-arpbind IP/MAC绑定
   - luci-app-autoreboot 支持计划重启
-  - luci-app-design-config Design主题配置插件
   - luci-app-diskman 磁盘管理工具
     - lsblk 列出所有可用块设备的信息
   - luci-app-docker Docker容器
@@ -60,12 +59,7 @@ You could edit and enable "Sync Code" YAML file to let your forked repo keep upd
   - luci-app-upnp 通用即插即用UPnP（端口自动转发）
 
 **3. Theme**
-  - luci-theme-argon
   - luci-theme-argon-mod
-  - luci-theme-bootstrap
-  - luci-theme-design
-  - luci-theme-material
-  - luci-theme-netgear
 
 **3. Network**
   - ip6tables-extra
